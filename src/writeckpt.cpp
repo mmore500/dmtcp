@@ -154,10 +154,10 @@ mtcp_writememoryareas(int fd)
     // such as vector and string.
 
     if ((uint64_t)area.addr == ProcessInfo::instance().restoreBufAddr()) {
-      JASSERT(area.size == ProcessInfo::instance().restoreBufLen())
-        ((void *)area.addr)
-        (area.size)
-        (ProcessInfo::instance().restoreBufLen());
+      //JASSERT(area.size == ProcessInfo::instance().restoreBufLen())
+        //((void *)area.addr)
+        //(area.size)
+        //(ProcessInfo::instance().restoreBufLen());
       continue;
     } else if (SharedData::isSharedDataRegion(area.addr)) {
       continue;
